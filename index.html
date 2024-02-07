@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -10,14 +11,22 @@
             // Attempt to open the app using the custom URL scheme
             window.location.href = 'leadtorevapp://leadtorev';
             // Set a timeout to redirect to a fallback URL if the app doesn't open
-            setTimeout(function() {
+            setTimeout(function () {
                 // Redirect to the Play Store or another webpage if the app isn't installed
                 window.location.href = 'https://play.google.com/store/apps/details?id=com.ltrmobileapp';
             }, 4000); // Adjust the timeout as needed
         }
     </script>
 </head>
+
 <body onload="openApp();">
-<p>If you are not redirected to the app or the Play Store, <a href="javascript:openApp();">click here to try again</a>.</p>
+    <button onclick="openApp()">Click to Open App</button>
+    <p>If you are not redirected to the app or the Play Store,
+        <a href="#" onclick="openApp()">click here to open the APP</a>.
+    </p>
+    <p>If you prefer, you can also
+        <a href="https://example.com">visit our website</a> directly.
+    </p>
 </body>
+
 </html>
